@@ -2,5 +2,5 @@
 
 echo "LOCK_DSN=flock" > .env
 echo ".env written"
-composer install -n
+composer install -n -q
 echo "Installed Shopware dependencies"
