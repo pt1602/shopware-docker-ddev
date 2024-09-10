@@ -26,7 +26,7 @@ mkcert -install
 ddev start && ddev setup
 ```
 
-* open https://shopware6.ddev.site/
+* open https://shopware.ddev.site/
 * Install Shopware 6 via default installer
 * Make sure you land on the https version after the installation
 * Activate the theme and needed plugins
