@@ -1,0 +1,19 @@
+{
+    "name": "pt1602/dummy-theme",
+    "description": "Theme skeleton plugin",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DummyTheme\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "DummyTheme\\DummyTheme",
+        "label": {
+            "de-DE": "Theme DummyTheme plugin",
+            "en-GB": "Theme DummyTheme plugin"
+        }
+    }
+}

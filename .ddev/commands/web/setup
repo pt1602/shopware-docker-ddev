@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "LOCK_DSN=flock" > .env
+echo ".env written"
+composer install --no-scripts -n > out.log 2> /dev/null
+echo "Installed Shopware dependencies"
