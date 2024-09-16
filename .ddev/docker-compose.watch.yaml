@@ -1,0 +1,18 @@
+services:
+    web:
+        expose:
+            # Storefront Hot Proxy Ports
+            - 9997
+            - 9998
+            - 9999
+        environment:
+            # Set custom storefront proxy url w/o SSL to allow custom ports
+            - PROXY_URL=http://${DDEV_HOSTNAME}
+            # Shopware Administration Watch Host
+            - HOST=0.0.0.0
+            # Shopware Administration Watch Port
+            - PORT=9997
+            # Expose APP_URL to administration watcher
+            - APP_URL=http://${DDEV_SITENAME}.ddev.site
+            - HTTP_EXPOSE=${DDEV_ROUTER_HTTP_PORT}:80,${DDEV_MAILPIT_PORT}:8025,9999:9999,9998:9998,9997:9997
+            - HTTPS_EXPOSE=${DDEV_ROUTER_HTTPS_PORT}:80,${DDEV_MAILPIT_HTTPS_PORT}:8025,8899:9999,8888:9998,8887:9997
