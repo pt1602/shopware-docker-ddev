@@ -2,13 +2,14 @@
 
 ## Requirements
 
-* Homebrew on Mac
-* Local Docker and DDEV installation
+* [Homebrew](https://brew.sh/) on Mac
+* [Docker](https://www.docker.com/products/docker-desktop/)
+* [DDEV](https://ddev.readthedocs.io/en/stable/)
 
-* Get Docker [here](https://www.docker.com/products/docker-desktop/)
-* Get Homebrew [here](https://brew.sh/)
+<details>
+    <summary>Installation on Mac</summary>
 
-### Install ddev with homebrew
+Install ddev with homebrew
 
 ```shell
 brew install drud/ddev/ddev
@@ -20,25 +21,33 @@ brew install drud/ddev/ddev
 mkcert -install
 ```
 
+</details>
+
 ## Setup
 
 ```shell
+git clone https://github.com/pt1602/shopware-docker-ddev.git
+cd shopware-docker-ddev
 ddev start && ddev setup
 ```
 
 * open https://shopware.ddev.site/
 * Install Shopware 6 via default installer
-* Make sure you land on the https version after the installation
 * Activate the theme and needed plugins
 * That should be it, happy coding
 
 ### Access
+
 * https://shopware.ddev.site/
 
 ### Admin:
+
 * https://shopware.ddev.site/admin
 
 ## Nice to know DDEV-Commands
+
+<details>
+    <summary>All you need to know</summary>
 
 ### Start container in current directory
 
@@ -93,3 +102,4 @@ ddev import-db --src=dump.sql.gz
 ```shell
 ddev export-db > dump.sql.gz
 ```
+</details>
